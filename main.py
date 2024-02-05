@@ -29,15 +29,5 @@ def check_health():
         "status": "OK"
     }
 
-
-@app.on_event("startup")
-async def startup():
-    pass
-
-
-@app.on_event("shutdown")
-async def shutdown():
-    pass
-
 def start():
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
